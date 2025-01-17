@@ -1,16 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-
-
-import subprocess
-import sys
-
-
-subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
-
-
-
+import joblib
 
 html_temp = """
     
@@ -20,10 +11,10 @@ html_temp = """
 
 st.markdown(html_temp, unsafe_allow_html=True)
 
-pickle_in = open('lr_clf.pkl', 'rb') 
+pickle_in = open('C:/Users/Lenovo/Downloads/Real Estate House Price Prediction/lr_clf.pkl', 'rb') 
 lr_clf = joblib.load(pickle_in) 
 
-column_pkl = open('columns.pkl', 'rb')
+column_pkl = open('C:/Users/Lenovo/Downloads/Real Estate House Price Prediction/columns.pkl', 'rb')
 columns = joblib.load(column_pkl)
 
 location = st.text_input(
