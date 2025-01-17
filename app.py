@@ -3,14 +3,12 @@ import pandas as pd
 import streamlit as st
 
 
-try:
-    import sklearn
-except ImportError:
-    print("scikit-learn is not installed. Installing...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
-    import sklearn
+import subprocess
+import sys
 
-import joblib
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
+
 
 
 
