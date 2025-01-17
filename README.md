@@ -32,5 +32,5 @@ Run the Streamlit web app locally:
 streamlit run app.py
 ```
 ### Here’s a preview of the app in action:
-[Screenshot]()
+![Screenshot](https://github.com/Laasyakshara25/Real-Estate-Price-Prediction/blob/main/assets/streamlit-app.jpg)
 
