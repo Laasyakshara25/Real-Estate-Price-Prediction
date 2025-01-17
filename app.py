@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import pickle
+import joblib
 
 
 
@@ -14,10 +14,10 @@ html_temp = """
 st.markdown(html_temp, unsafe_allow_html=True)
 
 pickle_in = open('lr_clf.pkl', 'rb') 
-lr_clf = pickle.load(pickle_in) 
+lr_clf = joblib.load(pickle_in) 
 
 column_pkl = open('columns.pkl', 'rb')
-columns = pickle.load(column_pkl)
+columns = joblib.load(column_pkl)
 
 location = st.text_input(
     "Enter location in Bangalore:", 
